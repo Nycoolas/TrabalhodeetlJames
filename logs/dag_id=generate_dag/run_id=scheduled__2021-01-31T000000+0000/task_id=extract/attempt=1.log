@@ -1,0 +1,12 @@
+[2024-08-29T00:15:10.020+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-08-29T00:15:10.228+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: generate_dag.extract scheduled__2021-01-31T00:00:00+00:00 [queued]>
+[2024-08-29T00:15:10.279+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: generate_dag.extract scheduled__2021-01-31T00:00:00+00:00 [queued]>
+[2024-08-29T00:15:10.281+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 1
+[2024-08-29T00:15:10.423+0000] {taskinstance.py:2879} INFO - Executing <Task(_PythonDecoratedOperator): extract> on 2021-01-31 00:00:00+00:00
+[2024-08-29T00:15:10.462+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=258) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-08-29T00:15:10.478+0000] {standard_task_runner.py:72} INFO - Started process 279 to run task
+[2024-08-29T00:15:10.569+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'generate_dag', 'extract', 'scheduled__2021-01-31T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/mydag.py', '--cfg-path', '/tmp/tmpceacjwiu']
+[2024-08-29T00:15:10.588+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask extract
+[2024-08-29T00:15:10.940+0000] {task_command.py:467} INFO - Running <TaskInstance: generate_dag.extract scheduled__2021-01-31T00:00:00+00:00 [running]> on host 7297db8a622b

@@ -1,0 +1,61 @@
+[2024-08-29T00:18:53.700+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-08-29T00:18:53.758+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: generate_dag.load2 scheduled__2024-08-28T00:00:00+00:00 [queued]>
+[2024-08-29T00:18:53.784+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: generate_dag.load2 scheduled__2024-08-28T00:00:00+00:00 [queued]>
+[2024-08-29T00:18:53.791+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 1
+[2024-08-29T00:18:53.868+0000] {taskinstance.py:2879} INFO - Executing <Task(_PythonDecoratedOperator): load2> on 2024-08-28 00:00:00+00:00
+[2024-08-29T00:18:53.894+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'generate_dag', 'load2', 'scheduled__2024-08-28T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/mydag.py', '--cfg-path', '/tmp/tmpjfmocxp3']
+[2024-08-29T00:18:53.898+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=101) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-08-29T00:18:53.900+0000] {standard_task_runner.py:72} INFO - Started process 105 to run task
+[2024-08-29T00:18:53.900+0000] {standard_task_runner.py:105} INFO - Job 14: Subtask load2
+[2024-08-29T00:18:54.241+0000] {task_command.py:467} INFO - Running <TaskInstance: generate_dag.load2 scheduled__2024-08-28T00:00:00+00:00 [running]> on host 7f15471d543d
+[2024-08-29T00:18:54.746+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='generate_dag' AIRFLOW_CTX_TASK_ID='load2' AIRFLOW_CTX_EXECUTION_DATE='2024-08-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-28T00:00:00+00:00'
+[2024-08-29T00:18:54.749+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-08-29T00:18:54.751+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-08-29T00:18:54.752+0000] {logging_mixin.py:190} INFO - Current task name:load2 state:running start_date:2024-08-29 00:18:53.759626+00:00
+[2024-08-29T00:18:54.753+0000] {logging_mixin.py:190} INFO - Dag name:generate_dag and current dag run status:running
+[2024-08-29T00:18:54.754+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-08-29T00:18:54.755+0000] {python.py:240} INFO - Done. Returned value was: Hello dog!
+[2024-08-29T00:18:54.814+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-08-29T00:18:54.818+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=generate_dag, task_id=load2, run_id=scheduled__2024-08-28T00:00:00+00:00, execution_date=20240828T000000, start_date=20240829T001853, end_date=20240829T001854
+[2024-08-29T00:18:54.854+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-08-29T00:18:54.855+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-08-29T00:18:54.856+0000] {logging_mixin.py:190} INFO - Dag name:generate_dag queued_at:2024-08-29 00:15:00.819322+00:00
+[2024-08-29T00:18:54.856+0000] {logging_mixin.py:190} INFO - Task hostname:7f15471d543d operator:_PythonDecoratedOperator
+[2024-08-29T00:18:54.884+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-08-29T00:18:54.936+0000] {taskinstance.py:3891} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-29T00:18:54.957+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
+[2024-08-31T13:44:35.798+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-08-31T13:44:35.971+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: generate_dag.load2 scheduled__2024-08-28T00:00:00+00:00 [queued]>
+[2024-08-31T13:44:36.091+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: generate_dag.load2 scheduled__2024-08-28T00:00:00+00:00 [queued]>
+[2024-08-31T13:44:36.095+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 1
+[2024-08-31T13:44:38.262+0000] {taskinstance.py:2879} INFO - Executing <Task(_PythonDecoratedOperator): load2> on 2024-08-28 00:00:00+00:00
+[2024-08-31T13:44:39.719+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=221) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-08-31T13:44:39.732+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'generate_dag', 'load2', 'scheduled__2024-08-28T00:00:00+00:00', '--job-id', '89', '--raw', '--subdir', 'DAGS_FOLDER/mydag.py', '--cfg-path', '/tmp/tmp5rpmak6v']
+[2024-08-31T13:44:39.766+0000] {standard_task_runner.py:105} INFO - Job 89: Subtask load2
+[2024-08-31T13:44:39.769+0000] {standard_task_runner.py:72} INFO - Started process 238 to run task
+[2024-08-31T13:45:02.362+0000] {cli_action_loggers.py:177} WARNING - Failed to log action (psycopg2.OperationalError) could not translate host name "postgres" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2024-08-31T13:54:35.540+0000] {job.py:229} INFO - Heartbeat recovered after 599.97 seconds
+[2024-08-31T13:54:35.772+0000] {task_command.py:467} INFO - Running <TaskInstance: generate_dag.load2 scheduled__2024-08-28T00:00:00+00:00 [running]> on host 763d90797398
+[2024-08-31T13:54:51.983+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='generate_dag' AIRFLOW_CTX_TASK_ID='load2' AIRFLOW_CTX_EXECUTION_DATE='2024-08-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-28T00:00:00+00:00'
+[2024-08-31T13:54:52.002+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-08-31T13:54:52.013+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-08-31T13:54:52.014+0000] {logging_mixin.py:190} INFO - Current task name:load2 state:running start_date:2024-08-31 13:44:35.984857+00:00
+[2024-08-31T13:54:52.015+0000] {logging_mixin.py:190} INFO - Dag name:generate_dag and current dag run status:running
+[2024-08-31T13:54:52.016+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-08-31T13:54:52.018+0000] {python.py:240} INFO - Done. Returned value was: Hello dog!
+[2024-08-31T13:54:52.200+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-08-31T13:54:52.229+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=generate_dag, task_id=load2, run_id=scheduled__2024-08-28T00:00:00+00:00, execution_date=20240828T000000, start_date=20240831T134435, end_date=20240831T135452
+[2024-08-31T13:54:52.284+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-08-31T13:54:52.294+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-08-31T13:54:52.346+0000] {logging_mixin.py:190} INFO - Dag name:generate_dag queued_at:2024-08-31 13:43:40.699079+00:00
+[2024-08-31T13:54:52.363+0000] {logging_mixin.py:190} INFO - Task hostname:763d90797398 operator:_PythonDecoratedOperator
+[2024-08-31T13:54:52.465+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-08-31T13:54:52.524+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2024-08-31T13:54:52.962+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-31T13:54:52.984+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
