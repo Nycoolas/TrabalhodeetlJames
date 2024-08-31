@@ -1,4 +1,4 @@
 */_pycache_/*
-logs/
-plugins/
-venv/
+logs/*
+plugins/*
+venv/*
