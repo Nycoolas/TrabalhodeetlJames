@@ -1,4 +1,5 @@
 */_pycache_/*
-logs/*
+./logs/
 plugins/*
-venv/*
+./dags/_pycache_
+./venv
