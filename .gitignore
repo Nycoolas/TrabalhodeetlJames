@@ -1,4 +1,29 @@
+# Ignorar pastas de logs, plugins e ambiente virtual
 logs/
 plugins/
-venv
+venv/*
 
+# Ignorar arquivos de configuração do Airflow
+airflow.cfg
+unittests.cfg
+
+# Ignorar arquivos gerados pelo Docker
+*.log
+*.pid
+*.swp
+
+
+# Ignorar arquivos temporários do sistema
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.db
+
+# Ignorar IDEs
+.idea/
+.vscode/
+
+# Ignorar arquivos relacionados ao sistema operacional
+.DS_Store
+Thumbs.db
