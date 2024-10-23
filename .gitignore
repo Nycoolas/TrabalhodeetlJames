@@ -3,3 +3,4 @@
 plugins/*
 ./dags/_pycache_
 ./venv
+logs/
