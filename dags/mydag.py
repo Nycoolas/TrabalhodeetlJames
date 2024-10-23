@@ -5,12 +5,15 @@ from airflow.decorators import dag, task
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.hooks.postgres_hook import PostgresHook
 
-DLL_TABLE = """CREATE TABLE IF NOT EXISTS accounts (accountDescription varchar(200), accountName varchar(200), accountKey int)"""
+DLL_TABLE = "CREATE TABLE IF NOT EXISTS accounts (accountDescription varchar(200), accountName varchar(200), accountKey int)"
 
-def insertAccount(accountKey,accountName,accountDescription):
-    return """INSERT INTO books_table (accountKey, accountName, accountDescription) VALUES (%i, %s, %s)"""
+def insertAccount(accountKey, accountName, accountDescription):
+    return f"""INSERT INTO accounts (accountKey, accountName, accountDescription) VALUES ({accountKey}, '{accountName}', '{accountDescription}')"""
 
-@dag(start_date=datetime.datetime(2024, 8, 27), schedule="@daily")
+@dag(
+    start_date=datetime.datetime(2024, 8, 31),
+    schedule="@daily"
+)
 def generate_dag():
 
     @task
@@ -35,9 +38,10 @@ def generate_dag():
         conn = pg_hook.get_conn()
         cursor = conn.cursor()
         cursor.execute(DLL_TABLE)
-        
+        conn.commit()
         for record in records:
-            cursor.execute(insertAccount(), record)
+            print(record)
+            cursor.execute(insertAccount(record[0],record[1],record[2] )) # , , accountDescription
         
         conn.commit()
         cursor.close()
